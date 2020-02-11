@@ -27,4 +27,20 @@ class Network
     end
     all_actors
   end
+
+  def shows_by_actor
+    actor_shows = {}
+    all_actors = []
+    @shows.each do |show|
+      show.actors.each do |actor|
+        all_actors << actor
+      end
+    end
+    all_actors.each do |actor|
+      actor_shows[actor] = @shows.select do |show|
+        show.actors.include?(actor)
+      end
+    end
+    actor_shows
+  end
 end
