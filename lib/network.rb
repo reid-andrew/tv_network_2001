@@ -43,4 +43,14 @@ class Network
     end
     actor_shows
   end
+
+  def prolific_actors
+    prolifics = []
+    shows_by_actor.each do |actor, shows|
+      if shows.size > 1
+        prolifics << actor
+      end
+    end
+    prolifics
+  end
 end

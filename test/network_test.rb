@@ -59,7 +59,6 @@ class Network_Test < Minitest::Test
     @nbc.add_show(@knight_rider)
     @nbc.add_show(@parks_and_rec)
     @nbc.add_show(@baywatch)
-    require "pry"; binding.pry
 
     expected = {
      "David Hasselhoff" => [@knight_rider, @baywatch],
@@ -69,5 +68,14 @@ class Network_Test < Minitest::Test
    }
 
    assert_equal expected, @nbc.shows_by_actor
+  end
+
+  def test_it_has_prolific_actors
+      @nbc.add_show(@knight_rider)
+      @nbc.add_show(@parks_and_rec)
+      @nbc.add_show(@baywatch)
+      # require "pry"; binding.pry
+
+      assert_equal ["David Hasselhoff"], @nbc.prolific_actors
   end
 end
