@@ -20,4 +20,11 @@ class Network
     main_chars
   end
 
+  def actors_by_show
+    all_actors = {}
+    @shows.each do |show|
+      all_actors[show] = show.actors
+    end
+    all_actors
+  end
 end
