@@ -5,11 +5,15 @@ require './lib/character'
 class Character_Test < Minitest::Test
 
   def setup
-    @kitt = Character.new
+    @kitt = Character.new({name: "KITT", actor: "William Daniels", salary: 1_000_000})
   end
 
   def test_it_exists
     assert_instance_of Character, @kitt
+  end
+
+  def test_it_has_a_name
+    assert_equal "KITT", @kitt.name
   end
 
 end
