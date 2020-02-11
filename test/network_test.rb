@@ -33,4 +33,11 @@ class Network_Test < Minitest::Test
 
     assert_equal [@knight_rider, @parks_and_rec], @nbc.shows
   end
+
+  def test_it_has_main_characters
+    @nbc.add_show(@knight_rider)
+    @nbc.add_show(@parks_and_rec)
+    
+    assert_equal [@kitt], @nbc.main_characters
+  end
 end

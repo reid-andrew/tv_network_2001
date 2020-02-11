@@ -10,4 +10,14 @@ class Network
     @shows << show
   end
 
+  def main_characters
+    main_chars = []
+    @shows.each do |show|
+      show.characters.each do |character|
+        main_chars << character if character.name == character.name.upcase && character.salary > 500_000
+      end
+    end
+    main_chars
+  end
+
 end
