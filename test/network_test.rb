@@ -16,4 +16,8 @@ class Network_Test < Minitest::Test
   def test_it_has_a_name
     assert_equal "NBC", @nbc.name
   end
+
+  def test_it_begins_with_no_shows
+    assert_equal [], @nbc.shows
+  end
 end
