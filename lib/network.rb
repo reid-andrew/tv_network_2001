@@ -46,11 +46,7 @@ class Network
 
   def prolific_actors
     prolifics = []
-    shows_by_actor.each do |actor, shows|
-      if shows.size > 1
-        prolifics << actor
-      end
-    end
+    shows_by_actor.each { |actor, shows| prolifics << actor if shows.size > 1}
     prolifics
   end
 end
