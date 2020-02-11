@@ -36,7 +36,6 @@ class Show_Test < Minitest::Test
   end
 
   def test_it_has_actors
-    require "pry"; binding.pry
     assert_equal ["David Hasselhoff", "William Daniels"], @knight_rider.actors
   end
 
