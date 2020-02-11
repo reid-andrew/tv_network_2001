@@ -35,4 +35,9 @@ class Show_Test < Minitest::Test
     assert_equal "David Hasselhoff", @knight_rider.highest_paid_actor
   end
 
+  def test_it_has_actors
+    require "pry"; binding.pry
+    assert_equal ["David Hasselhoff", "William Daniels"], @knight_rider.actors
+  end
+
 end
