@@ -74,7 +74,6 @@ class Network_Test < Minitest::Test
       @nbc.add_show(@knight_rider)
       @nbc.add_show(@parks_and_rec)
       @nbc.add_show(@baywatch)
-      # require "pry"; binding.pry
 
       assert_equal ["David Hasselhoff"], @nbc.prolific_actors
   end
