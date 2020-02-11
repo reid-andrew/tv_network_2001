@@ -30,14 +30,10 @@ class Network
     actor_shows = {}
     all_actors = []
     @shows.each do |show|
-      show.actors.each do |actor|
-        all_actors << actor
-      end
+      show.actors.each { |actor| all_actors << actor }
     end
     all_actors.each do |actor|
-      actor_shows[actor] = @shows.select do |show|
-        show.actors.include?(actor)
-      end
+      actor_shows[actor] = @shows.select { |show| show.actors.include?(actor) }
     end
     actor_shows
   end
