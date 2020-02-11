@@ -16,4 +16,8 @@ class Character
     @attributes[:salary]
   end
 
+  def salary_over_500_k
+    salary > 500_000
+  end
+
 end
