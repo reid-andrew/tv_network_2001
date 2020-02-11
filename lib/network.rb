@@ -22,9 +22,7 @@ class Network
 
   def actors_by_show
     all_actors = {}
-    @shows.each do |show|
-      all_actors[show] = show.actors
-    end
+    @shows.each { |show| all_actors[show] = show.actors }
     all_actors
   end
 
